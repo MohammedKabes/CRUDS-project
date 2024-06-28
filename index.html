@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CRUD System</title>
+  </head>
+  <body dir="rtl">
+    <div class="container">
+      <div class="header">
+        <h2 class="tittle">cruds system</h2>
+        <p class="describe">إدارة أقساط العملاء</p>
+      </div>
+
+      <div class="main">
+        <form action="" id="form">
+          <div class="inputControl">
+            <input
+              type="text"
+              onkeyup="validateName(this.value)"
+              id="name"
+              ;
+              placeholder="اسم العميل"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="inputControl">
+            <input
+              type="number"
+              onkeyup="validatePhone(this.value)"
+              id="number"
+              placeholder="رقم الهاتف "
+            />
+            <div class="error"></div>
+          </div>
+          <div class="price">
+            <div class="inputControl">
+              <input
+                type="number"
+                id="total"
+                onkeyup="price(); validateTotal();"
+                placeholder="الإجمالي"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="inputControl">
+              <input
+                type="number"
+                id="paid"
+                onkeyup="price(); validateTotal();"
+                placeholder="المدفوع"
+              />
+              <div class="error"></div>
+            </div>
+            <small id="resudal"></small>
+          </div>
+
+          <button type="submit" id="add" class="add">إضافة</button>
+        </form>
+      </div>
+      <div id="deleteAll"></div>
+      <input
+        id="search"
+        placeholder="البحث باسم العميل "
+        onkeyup="searchCustomer(this.value)"
+        type="text"
+      />
+
+      <table>
+        <thead>
+          <tr>
+            <th>اسم العميل</th>
+            <th>رقم الهاتف</th>
+            <th>الإجمالي</th>
+            <th>القسط</th>
+            <th>المتبقي</th>
+            <th>تعديل</th>
+            <th>حذف</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

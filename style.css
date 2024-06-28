@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Kufi Arabic";
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 20px; /* Add padding to container for better readability */
+}
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tittle {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.describe {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid rgb(130, 6, 239);
+  font-size: 15px;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.inputControl.error input {
+  border-color: #ff3860;
+}
+
+.inputControl.success input {
+  border-color: #09c372;
+}
+
+.inputControl .error {
+  color: #ff3860;
+  font-size: 15px;
+  height: 15px;
+  margin-top: 5px;
+}
+
+small {
+  background-color: rgb(238, 178, 178);
+  height: fit-content;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+small::before {
+  content: "المتبقي :";
+}
+
+.add {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #4caf50;
+  color: white;
+  outline: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#search {
+  width: 100%;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 300;
+  border-spacing: 2px;
+}
+
+table th {
+  height: 50px;
+  background-color: rgb(158, 198, 238);
+}
+
+table td {
+  border: 2px dotted #ccc;
+}
+
+#update,
+#deleteing,
+#deleteCustomers {
+  width: 100%;
+  padding: 4px 0;
+  margin: 5px 0;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#update {
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid transparent;
+}
+
+#deleteing,
+#deleteCustomers {
+  background-color: #f44336;
+  color: white;
+  border: 2px solid transparent;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px; /* Adjust container padding for smaller screens */
+  }
+
+  .tittle {
+    font-size: 24px;
+  }
+
+  .describe {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .add {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tittle {
+    font-size: 20px;
+  }
+
+  .describe {
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 13px;
+  }
+
+  .add {
+    font-size: 16px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+}
