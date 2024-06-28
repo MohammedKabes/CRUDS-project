@@ -87,7 +87,7 @@ function validatePhone(value) {
     return false;
   }
 }
-//validte price 
+//validte price
 function validateTotal() {
   let totalValue = parseFloat(total.value);
   let paidValue = parseFloat(paid.value);
@@ -136,7 +136,6 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-
 //create new customer
 function newCustomer() {
   let newCustomer = {
@@ -160,6 +159,10 @@ function newCustomer() {
     mood = "create";
     add.innerHTML = "إضافة";
   }
+  naming.style.borderColor = "";
+  number.style.borderColor = "";
+  total.style.borderColor = "";
+  paid.style.borderColor = "";
 }
 
 //clear inputs
